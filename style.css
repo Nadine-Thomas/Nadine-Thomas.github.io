@@ -72,8 +72,8 @@ main {
 }
 
 .about-card img.headshot {
-  width: 160px;
-  height: 160px;
+  width: 400px;
+  height: 533px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
