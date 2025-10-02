@@ -5,6 +5,9 @@ body {
   padding: 0;
   background: #ffeef4; /* very light pink */
   color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* ===== Navbar ===== */
@@ -44,19 +47,21 @@ body {
 /* ===== Main Wrapper ===== */
 main {
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 1rem 2rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 /* ===== Section Flex Layout (About Me) ===== */
 .section-flex {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 3rem;
-  margin-bottom: 4rem;
   flex-wrap: wrap;
-  min-height: calc(100vh - 200px); /* makes it stretch to near bottom */
+  width: 100%;
 }
 
 /* ===== About Card (Headshot on Left) ===== */
@@ -166,7 +171,6 @@ footer {
   background: #ffb6c1;
   color: #fff;
   padding: 2rem 3rem;
-  margin-top: 4rem;
   text-align: center;
 }
 
@@ -215,11 +219,14 @@ footer .contact-links span {
 }
 
 @media (max-width: 768px) {
+  main {
+    align-items: flex-start;
+  }
+
   .section-flex {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    min-height: auto;
   }
 
   .text-card {
