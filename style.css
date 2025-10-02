@@ -67,7 +67,7 @@ main {
   text-align: center;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
   flex: 0 0 350px;
-  min-height: 400px; /* makes card taller */
+  min-height: 350px; /* makes card taller */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +81,7 @@ main {
   object-fit: cover;
   object-position: center;
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; /* space between headshot and name */
   box-shadow: none;
 }
 
@@ -161,6 +161,52 @@ main {
   margin-top: 1rem;
 }
 
+/* ===== Footer ===== */
+footer {
+  background: #ffb6c1;
+  color: #fff;
+  padding: 2rem 3rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+footer h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  font-size: 1.1rem;
+  line-height: 2;
+  margin: 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+footer .contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+footer .contact-links span {
+  display: inline-block;
+}
+
 /* ===== Responsive Breakpoints ===== */
 @media (max-width: 1024px) {
   main {
@@ -206,6 +252,11 @@ main {
   .about-text h2 {
     font-size: 2rem;
   }
+
+  footer .contact-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -235,37 +286,6 @@ main {
   .about-text p {
     font-size: 1.1rem;
   }
-}
-
-/* ===== Contact Section ===== */
-.contact-section {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 2px solid #ffb6c1;
-}
-
-.contact-section h3 {
-  font-size: 2rem;
-  color: #ec587a;
-  margin-bottom: 1rem;
-}
-
-.contact-section p {
-  font-size: 1.25rem;
-  line-height: 2;
-  color: #333;
-}
-
-.contact-section a {
-  color: #f46b76;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.contact-section a:hover {
-  color: #ff6991;
-  text-decoration: underline;
 }
 
 /* ===== Smooth Scroll ===== */
