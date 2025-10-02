@@ -48,37 +48,41 @@ main {
   padding: 1rem 2rem;
 }
 
-/* ===== Section Flex Layout ===== */
+/* ===== Section Flex Layout (About Me) ===== */
 .section-flex {
   display: flex;
-  justify-content: flex-end; /* aligns text to the right */
+  justify-content: flex-start; /* align content left */
+  align-items: flex-start;
   gap: 3rem;
   margin-bottom: 4rem;
   flex-wrap: wrap;
 }
 
-/* ===== About Card (Headshot + Name) ===== */
+/* ===== About Card (Headshot on Left) ===== */
 .about-card {
   background: #ffb6c1;
   padding: 2rem;
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
-  flex: 0 0 350px;
+  flex: 0 0 350px; /* card remains rectangular */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-card img.headshot {
-  width: 160px;         /* fixed size */
-  height: 160px;        /* fixed size */
-  border-radius: 50%;   /* makes the image circular */
-  object-fit: cover;    /* keeps the image from stretching */
+  width: 160px;          /* fixed size */
+  height: 160px;         /* fixed size */
+  border-radius: 50%;    /* circular image */
+  object-fit: cover;     /* maintain aspect ratio */
   display: block;
-  margin: 0 auto;       /* centers the circle inside the card */
-  box-shadow: none;     /* remove any outline/shadow */
+  margin-bottom: 1rem;   /* space between image and name */
+  box-shadow: none;
 }
 
 .about-card h1 {
-  margin-top: 1rem;
+  margin: 0;
   font-size: 2rem;
   color: #fff;
 }
@@ -130,7 +134,7 @@ main {
 
 @media (max-width: 768px) {
   .section-flex {
-    justify-content: center; /* center on smaller screens */
+    justify-content: center; /* stack sections centered */
     flex-direction: column;
     align-items: center;
   }
@@ -167,4 +171,14 @@ main {
   .nav-left .site-title {
     font-size: 1.4rem;
   }
+
+  .about-card img.headshot {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* ===== Smooth Scroll ===== */
+html {
+  scroll-behavior: smooth;
 }
