@@ -12,13 +12,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ffeef4; /* same as body background */
+  background: #ffeef4; /* same as body */
   padding: 1rem 3rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .nav-left .site-title {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #ec587a;
 }
@@ -41,37 +41,40 @@ body {
   text-decoration: underline;
 }
 
-/* ===== Main Content Wrapper ===== */
+/* ===== Main Wrapper ===== */
 main {
-  max-width: 1200px; /* wider content area */
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 1rem 2rem;
 }
 
-/* ===== About Me Section ===== */
-.about-flex {
+/* ===== Section Flex Layout ===== */
+.section-flex {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start; /* content aligned left */
+  justify-content: flex-end; /* aligns text to the right */
   gap: 3rem;
+  margin-bottom: 4rem;
   flex-wrap: wrap;
 }
 
-/* ---- Photo Card ---- */
+/* ===== About Card (Headshot + Name) ===== */
 .about-card {
   background: #ffb6c1;
   padding: 2rem;
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
-  flex: 0 0 320px; /* wider card */
+  flex: 0 0 350px;
 }
 
 .about-card img.headshot {
-  width: 100%;
-  height: auto;
-  border-radius: 12px; /* rectangle with slightly rounded corners */
-  box-shadow: none;
+  width: 160px;         /* fixed size */
+  height: 160px;        /* fixed size */
+  border-radius: 50%;   /* makes the image circular */
+  object-fit: cover;    /* keeps the image from stretching */
+  display: block;
+  margin: 0 auto;       /* centers the circle inside the card */
+  box-shadow: none;     /* remove any outline/shadow */
 }
 
 .about-card h1 {
@@ -80,47 +83,41 @@ main {
   color: #fff;
 }
 
-/* ---- About Text ---- */
-.about-text {
-  flex: 1;
-  font-size: 1.4rem; /* bigger text */
-  line-height: 1.8;
-  color: #333;
-}
-
-/* ===== Content Cards (Projects, Resume) ===== */
-.content-card {
+/* ===== Text Cards (About Me, Projects, Resume) ===== */
+.text-card {
   background: white;
   padding: 2.5rem;
   border-radius: 16px;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.2);
-  margin-bottom: 2rem;
+  flex: 1;
+  max-width: 800px;
 }
 
-.content-card h2 {
-  color: #ec587a;
+.text-card h2 {
   font-size: 2rem;
+  color: #ec587a;
   margin-top: 0;
 }
 
-.content-card h3 {
-  color: #ff6991;
+.text-card h3 {
   font-size: 1.5rem;
+  color: #ff6991;
   margin-bottom: 0.5rem;
 }
 
-.content-card p {
-  font-size: 1.2rem;
+.text-card p {
+  font-size: 1.25rem;
   line-height: 1.8;
+  color: #333;
 }
 
-.content-card a {
+.text-card a {
   color: #f46b76;
   text-decoration: none;
   font-weight: bold;
 }
 
-.content-card a:hover {
+.text-card a:hover {
   text-decoration: underline;
 }
 
@@ -132,28 +129,34 @@ main {
 }
 
 @media (max-width: 768px) {
-  .about-flex {
+  .section-flex {
+    justify-content: center; /* center on smaller screens */
     flex-direction: column;
     align-items: center;
   }
 
-  .about-text {
-    text-align: center;
+  .text-card {
+    max-width: 90%;
+  }
+
+  .about-card {
+    flex: 0 0 90%;
+    margin-bottom: 2rem;
+  }
+
+  .about-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .text-card h2 {
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 480px) {
-  .about-card {
-    flex: 0 0 90%;
-    padding: 1.5rem;
-  }
-
-  .about-card h1 {
-    font-size: 1.6rem;
-  }
-
-  .about-text {
-    font-size: 1.2rem;
+  .text-card {
+    padding: 2rem;
+    font-size: 1.1rem;
   }
 
   .nav-right a {
