@@ -9,7 +9,7 @@ body {
 
 /* Top navigation bar */
 header {
-  background: #ff697b; /* hot pink bar */
+  background: #eb7280; /* hot pink bar */
   padding: 1rem;
   text-align: center;
 }
@@ -37,29 +37,48 @@ main {
   padding: 1rem;
 }
 
-/* About Me card */
+/* Flex container for About Me section */
+.about-flex {
+  display: flex;
+  align-items: center;   /* vertically align */
+  justify-content: center;
+  gap: 2rem;             /* space between photo card & text */
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Photo card */
 .about-card {
-  background: #ffb6c1; /* light pink fill */
-  padding: 2rem;
+  background: #ffb6c1;
+  padding: 1.5rem;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
+  flex: 0 0 280px;  /* fixed width card */
 }
 
 .about-card h1 {
-  margin-top: 0;
-  color: #fff; /* white text for contrast */
-  font-size: 2.5rem;
+  margin: 0;
+  color: #fff;
+  font-size: 1.8rem;
 }
 
+/* Headshot inside card */
 .headshot {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  display: block;
-  margin: 1rem auto;
-  border: 5px solid #fff; /* white border around photo */
+  margin-top: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* About Me text on the right */
+.about-text {
+  flex: 1;  /* take remaining space */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
 }
 
 .about-card p {

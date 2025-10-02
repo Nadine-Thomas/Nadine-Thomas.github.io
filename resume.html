@@ -3,20 +3,33 @@
 <head>
   <title>Resume - Nadine Thomas</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .resume-container {
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      height: 1000px; /* adjust height as needed */
+      border: none;
+      box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Resume</h1>
     <nav>
       <a href="index.html">About Me</a>
       <a href="projects.html">Projects</a>
-      <a href="resume.html">Resume</a>
+      <a href="resume.html" class="active">Resume</a>
     </nav>
   </header>
+
   <main>
-    <h2>Resume</h2>
-    <p>You can view or download my resume below:</p>
-    <p><a href="./assets/NadineThomasResume2025.pdf" target="_blank">📄 View Resume (PDF)</a></p>
+    <div class="resume-container">
+      <h1>My Resume</h1>
+      <iframe src="assets/NadineThomasResume2025.pdf"></iframe>
+    </div>
   </main>
 </body>
 </html>
