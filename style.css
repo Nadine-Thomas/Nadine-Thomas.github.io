@@ -3,124 +3,115 @@ body {
   font-family: Georgia, serif;
   margin: 0;
   padding: 0;
-  background: #fff0f5; /* light pink */
+  background: #ffeef4; /* very light pink */
   color: #333;
 }
 
-/* ===== Header & Navigation ===== */
-header {
-  background: #eb7280; /* hot pink */
-  padding: 1rem;
-  text-align: center;
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffeef4; /* same as body background */
+  padding: 1rem 3rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-nav a {
-  color: white;
-  margin: 0 1rem;
+.nav-left .site-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ec587a;
+}
+
+.nav-right a {
+  color: #ec587a;
+  margin-left: 2rem;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-nav a:hover {
+.nav-right a:hover {
   text-decoration: underline;
-  color: #ffd1dc; /* lighter pink on hover */
+  color: #ff6991;
 }
 
-nav a.active {
+.nav-right a.active {
   text-decoration: underline;
-  aria-current: page;
 }
 
 /* ===== Main Content Wrapper ===== */
 main {
-  max-width: 900px;
+  max-width: 1200px; /* wider content area */
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 /* ===== About Me Section ===== */
 .about-flex {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 1rem;
-  flex-wrap: wrap; /* allow wrapping on small screens */
+  align-items: flex-start;
+  justify-content: flex-start; /* content aligned left */
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 /* ---- Photo Card ---- */
 .about-card {
   background: #ffb6c1;
-  padding: 1.5rem;
-  border-radius: 20px;
+  padding: 2rem;
+  border-radius: 16px;
   text-align: center;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
-  flex: 0 0 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 320px; /* wider card */
 }
 
-.about-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(255, 105, 180, 0.4);
-}
-
-.about-card h1 {
-  margin: 0;
-  color: #fff;
-  font-size: 1.8rem;
-}
-
-.headshot {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  margin-top: 1rem;
+.about-card img.headshot {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* rectangle with slightly rounded corners */
   box-shadow: none;
 }
 
+.about-card h1 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
 /* ---- About Text ---- */
-.about-text, .about-card p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+.about-text {
+  flex: 1;
+  font-size: 1.4rem; /* bigger text */
+  line-height: 1.8;
   color: #333;
 }
 
-.about-text {
-  flex: 1;
-}
-
-/* ===== Shared Content Cards (Projects, Resume) ===== */
+/* ===== Content Cards (Projects, Resume) ===== */
 .content-card {
   background: white;
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 16px;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.2);
   margin-bottom: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.content-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(255, 105, 180, 0.3);
 }
 
 .content-card h2 {
   color: #ec587a;
+  font-size: 2rem;
   margin-top: 0;
 }
 
 .content-card h3 {
   color: #ff6991;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .content-card p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
 .content-card a {
@@ -134,6 +125,12 @@ main {
 }
 
 /* ===== Responsive Breakpoints ===== */
+@media (max-width: 1024px) {
+  main {
+    padding: 1rem 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .about-flex {
     flex-direction: column;
@@ -146,23 +143,25 @@ main {
 }
 
 @media (max-width: 480px) {
-  .headshot {
-    width: 120px;
-    height: 120px;
-  }
-
   .about-card {
-    padding: 1rem;
-    flex: 0 0 auto;
-    width: 80%;
+    flex: 0 0 90%;
+    padding: 1.5rem;
   }
 
-  .about-text, .about-card p {
+  .about-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+  }
+
+  .nav-right a {
     font-size: 1.1rem;
+    margin-left: 1rem;
   }
-}
 
-/* ===== Smooth Scroll (optional) ===== */
-html {
-  scroll-behavior: smooth;
+  .nav-left .site-title {
+    font-size: 1.4rem;
+  }
 }
