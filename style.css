@@ -46,12 +46,13 @@ body {
 
 /* ===== Main Wrapper ===== */
 main {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 3rem 2rem;
   flex: 1;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 /* ===== Section Flex Layout (About Me) ===== */
@@ -99,7 +100,7 @@ main {
 /* ===== About Me Text (no card, just text) ===== */
 .about-text {
   flex: 1;
-  max-width: 800px;
+  min-width: 400px;
   display: flex;
   align-items: center; /* centers vertically */
   padding: 2rem;
@@ -123,9 +124,9 @@ main {
   padding: 2.5rem;
   border-radius: 16px;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.2);
-  flex: 1;
-  max-width: 800px;
-  margin: 2rem auto; /* centers cards on pages without left card */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .text-card h2 {
@@ -205,6 +206,12 @@ footer .contact-links {
   gap: 2rem;
   flex-wrap: wrap;
   margin-top: 1rem;
+}
+
+footer .contact-links span {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 footer .contact-links span {
