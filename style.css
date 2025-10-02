@@ -67,7 +67,7 @@ main {
   text-align: center;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
   flex: 0 0 350px;
-  min-height: 600px; /* makes card taller */
+  min-height: 500px; /* makes card taller */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,8 +75,8 @@ main {
 }
 
 .about-card img.headshot {
-  width: 220px; /* bigger headshot */
-  height: 220px;
+  width: 300px; /* bigger headshot */
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
