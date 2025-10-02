@@ -51,11 +51,12 @@ main {
 /* ===== Section Flex Layout (About Me) ===== */
 .section-flex {
   display: flex;
-  justify-content: flex-start; /* left align */
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 3rem;
   margin-bottom: 4rem;
   flex-wrap: wrap;
+  min-height: calc(100vh - 200px); /* makes it stretch to near bottom */
 }
 
 /* ===== About Card (Headshot on Left) ===== */
@@ -66,17 +67,19 @@ main {
   text-align: center;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
   flex: 0 0 350px;
-  min-height: 400px;
+  min-height: 600px; /* makes card taller */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .about-card img.headshot {
-  width: 200px;
-  height: 200px;
+  width: 220px; /* bigger headshot */
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center;
   display: block;
   margin-bottom: 1rem;
   box-shadow: none;
@@ -88,7 +91,28 @@ main {
   color: #fff;
 }
 
-/* ===== Text Cards (About Me, Projects, Resume) ===== */
+/* ===== About Me Text (no card, just text) ===== */
+.about-text {
+  flex: 1;
+  max-width: 800px;
+  display: flex;
+  align-items: center; /* centers vertically */
+  padding: 2rem;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #ec587a;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ===== Text Cards (Projects, Resume) ===== */
 .text-card {
   background: white;
   padding: 2.5rem;
@@ -149,6 +173,7 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    min-height: auto;
   }
 
   .text-card {
@@ -158,14 +183,28 @@ main {
   .about-card {
     flex: 0 0 90%;
     margin-bottom: 2rem;
+    min-height: auto;
   }
 
   .about-card h1 {
     font-size: 1.8rem;
   }
 
+  .about-card img.headshot {
+    width: 180px;
+    height: 180px;
+  }
+
   .text-card h2 {
     font-size: 1.8rem;
+  }
+
+  .about-text {
+    padding: 1rem;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
   }
 }
 
@@ -185,8 +224,16 @@ main {
   }
 
   .about-card img.headshot {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
   }
 }
 
