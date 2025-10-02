@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ===== Navbar ===== */
@@ -63,6 +64,7 @@ main {
   gap: 3rem;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 100%;
 }
 
 /* ===== About Card (Headshot on Left) ===== */
@@ -100,7 +102,8 @@ main {
 /* ===== About Me Text (no card, just text) ===== */
 .about-text {
   flex: 1;
-  min-width: 400px;
+  min-width: 300px;
+  max-width: 100%;
   display: flex;
   align-items: center; /* centers vertically */
   padding: 2rem;
