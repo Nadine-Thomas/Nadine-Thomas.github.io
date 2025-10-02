@@ -1,15 +1,15 @@
-/* General body styling */
+/* ===== General Styling ===== */
 body {
-  font-family: Georgia, sans-serif;
+  font-family: Georgia, serif;
   margin: 0;
   padding: 0;
-  background: #fff0f5; /* light pink background */
+  background: #fff0f5; /* light pink */
   color: #333;
 }
 
-/* Top navigation bar */
+/* ===== Header & Navigation ===== */
 header {
-  background: #eb7280; /* hot pink bar */
+  background: #eb7280; /* hot pink */
   padding: 1rem;
   text-align: center;
 }
@@ -20,42 +20,52 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 nav a:hover {
   text-decoration: underline;
+  color: #ffd1dc; /* lighter pink on hover */
 }
 
 nav a.active {
   text-decoration: underline;
+  aria-current: page;
 }
 
-/* Page content wrapper */
+/* ===== Main Content Wrapper ===== */
 main {
   max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
 }
 
-/* Flex container for About Me section */
+/* ===== About Me Section ===== */
 .about-flex {
   display: flex;
-  align-items: center;   /* vertically align */
+  align-items: center;
   justify-content: center;
-  gap: 2rem;             /* space between photo card & text */
+  gap: 2rem;
   max-width: 1000px;
   margin: 2rem auto;
   padding: 1rem;
+  flex-wrap: wrap; /* allow wrapping on small screens */
 }
 
-/* Photo card */
+/* ---- Photo Card ---- */
 .about-card {
   background: #ffb6c1;
   padding: 1.5rem;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
-  flex: 0 0 280px;  /* fixed width card */
+  flex: 0 0 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(255, 105, 180, 0.4);
 }
 
 .about-card h1 {
@@ -64,42 +74,42 @@ main {
   font-size: 1.8rem;
 }
 
-/* Headshot inside card */
 .headshot {
   width: 160px;
   height: 160px;
   border-radius: 50%;
   margin-top: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: none;
 }
 
-/* About Me text on the right */
+/* ---- About Text ---- */
+.about-text, .about-card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
 .about-text {
-  flex: 1;  /* take remaining space */
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #333;
+  flex: 1;
 }
 
-.about-card p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 1rem auto 0 auto;
-  color: #333;
-}
-
-/* Shared style for Projects and Resume cards */
+/* ===== Shared Content Cards (Projects, Resume) ===== */
 .content-card {
   background: white;
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.2);
   margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(255, 105, 180, 0.3);
 }
 
 .content-card h2 {
-  color: #ec587a; /* deep pink headings */
+  color: #ec587a;
   margin-top: 0;
 }
 
@@ -113,7 +123,6 @@ main {
   line-height: 1.6;
 }
 
-/* Links inside cards */
 .content-card a {
   color: #f46b76;
   text-decoration: none;
@@ -122,4 +131,38 @@ main {
 
 .content-card a:hover {
   text-decoration: underline;
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .headshot {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-card {
+    padding: 1rem;
+    flex: 0 0 auto;
+    width: 80%;
+  }
+
+  .about-text, .about-card p {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== Smooth Scroll (optional) ===== */
+html {
+  scroll-behavior: smooth;
 }
