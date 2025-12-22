@@ -22,70 +22,139 @@
     <div class="text-card" style="margin: 2rem auto; max-width: 800px;">
       <h2>Completed Projects</h2>
 
+      <hr>
+
       <div class="project">
-        <h3>RPE Tracking Application</h3>
-        <p><strong>Role:</strong> Frontend Engineer & UI/UX Designer</p>
-        <p><strong>Tech Stack:</strong> React.js, Flask, Pandas</p>
-        <p><strong>Overview:</strong> Designed and implemented a full-stack web app enabling athletes to submit Rate of Perceived Exertion (RPE) scores for coaches and athletic directors to visualize and track.</p>
-        <ul>
-          <li>Developed the main page, athlete submission form, and daily report view using React.</li>
-          <li>Implemented Flask routes to handle form submissions and store responses in a CSV file.</li>
-          <li>Ensured consistent styling through a centralized CSS structure for maintainability.</li>
-          <li>Collaborated with teammates responsible for visualization components and extended Flask logic.</li>
-        </ul>
-        <p><strong>Links:</strong> 
-          <a href="https://rpe.truman.edu" target="_blank">Live Site</a> | 
-          <a href="https://github.com/MasonC13/RPE-Data-Tracker" target="_blank">GitHub</a>
-        </p>
+        <div class="project-content">
+         <h3>RPE Tracking Application</h3>
+          <p><strong>Role:</strong> Frontend Engineer & UI/UX Designer</p>
+          <p><strong>Tech Stack:</strong> React.js, Flask, Pandas</p>
+          <p><strong>Overview:</strong> Designed and implemented a full-stack web app enabling athletes to submit Rate of Perceived Exertion (RPE) scores for coaches and athletic directors to visualize and track.</p>
+          <ul>
+            <li>Developed the main page, athlete submission form, and daily report view using React.</li>
+            <li>Implemented Flask routes to handle form submissions and store responses in a CSV file.</li>
+            <li>Ensured consistent styling through a centralized CSS structure for maintainability.</li>
+            <li>Collaborated with teammates responsible for visualization components and extended Flask logic.</li>
+          </ul>
+          <p><strong>Links:</strong> <a href="https://github.com/Nadine-Thomas/RPE-Tracker" target="_blank">GitHub</a></p>
+        </div>
+        <div class="project-image">
+          <img src="assets/RPE.png" alt="RPE Tracker Screenshot">
+        </div>
       </div>
 
       <hr>
 
       <div class="project">
-        <h3>Playfair Recreation</h3>
-        <p><strong>Tech Stack:</strong> R, ggplot2, ggforce</p>
-        <p><strong>Overview:</strong> Recreated and analyzed William Playfair’s historical economic visualizations to explore relationships between taxation and population.</p>
-        <ul>
-          <li>Used R, ggplot2, and ggforce to replicate Playfair’s color and line techniques.</li>
-          <li>Discussed how design choices impact visual interpretation.</li>
-        </ul>
-        <p><strong>Links:</strong> 
-          <a href="https://github.com/Nadine-Thomas/Playfair-Recreation" target="_blank">GitHub</a>
-        </p>
+        <div class="project-content">
+          <h3>Playfair Recreation</h3>
+          <p><strong>Tech Stack:</strong> R, ggplot2, ggforce</p>
+          <p><strong>Overview:</strong> Recreated and analyzed William Playfair’s historical economic visualizations to explore relationships between taxation and population.</p>
+          <ul>
+            <li>Used R, ggplot2, and ggforce to replicate Playfair’s color and line techniques.</li>
+            <li>Discussed how design choices impact visual interpretation.</li>
+          </ul>
+          <p><strong>Links:</strong> 
+            <a href="https://github.com/Nadine-Thomas/Playfair-Recreation" target="_blank">GitHub</a>
+          </p>
+        </div>
+        <div class="project-image">
+          <img src="assets/Playfair.png" alt="Playfair Recreation">
+        </div>
       </div>
 
       <hr>
 
       <div class="project">
-        <h3>Parking Lot Simulation</h3>
-        <p><strong>Tech Stack:</strong> Java, Object-Oriented Programming, Collections Framework</p>
-        <p><strong>Overview:</strong> A console-based simulation that manages parking spaces, vehicle reservations, and payments in a dynamic parking lot system.</p>
-        <ul>
-          <li>Implemented the main program logic for user interaction through a menu-driven interface.</li>
-          <li>Developed features for viewing and reserving parking spaces, managing reservations, handling payments, and tracking vehicle entry/exit.</li>
-          <li>Applied object-oriented principles with classes for <code>ParkingLot</code>, <code>Vehicle</code>, <code>Reservation</code>, and <code>ParkingSpace</code>.</li>
-          <li>Integrated time-based calculations using <code>LocalDateTime</code> and <code>Duration</code> to compute parking fees.</li>
-        </ul>
-        <p><strong>Links:</strong> 
-          <a href="https://github.com/Nadine-Thomas/Parking-Lot-Simulation" target="_blank">GitHub</a>
-        </p>
+        <div class="project-content">
+          <h3>Parking Lot Simulation</h3>
+          <p><strong>Tech Stack:</strong> Java, Object-Oriented Programming, Collections Framework</p>
+          <p><strong>Overview:</strong> A console-based simulation that manages parking spaces, vehicle reservations, and payments in a dynamic parking lot system.</p>
+          <ul>
+            <li>Implemented the main program logic for user interaction through a menu-driven interface.</li>
+            <li>Developed features for viewing and reserving parking spaces, managing reservations, handling payments, and tracking vehicle entry/exit.</li>
+            <li>Applied object-oriented principles with classes for <code>ParkingLot</code>, <code>Vehicle</code>, <code>Reservation</code>, and <code>ParkingSpace</code>.</li>
+            <li>Integrated time-based calculations using <code>LocalDateTime</code> and <code>Duration</code> to compute parking fees.</li>
+          </ul>
+          <p><strong>Links:</strong> 
+            <a href="https://github.com/Nadine-Thomas/Parking-Lot-Simulation" target="_blank">GitHub</a>
+          </p>
+        </div>
+        <div class="project-image">
+          <img src="assets/ParkingLot.png" alt="Parking Lot Simulation Screenshot">
+        </div>
       </div>
 
       <hr>
 
-      <h2>In Progress</h2>
+      <div class="project">
+        <div class="project-content">
+          <h3>Book Review Analysis & Recommendation System</h3>
+          <p><strong>Role:</strong> Data Scientist & NLP Engineer</p>
+          <p><strong>Tech Stack:</strong> Python, MySQL, Scikit-learn, Pandas, SQLAlchemy</p>
+          <p><strong>Overview:</strong> Built a book recommendation system that combines structured SQL data with unstructured review text to generate similarity-based book recommendations.</p>
+          <ul>
+            <li>Cleaned and processed review text in Python to build consolidated text profiles for each book.</li>
+            <li>Applied TF-IDF vectorization and cosine similarity to measure textual similarity between books.</li>
+            <li>Implemented filtering and scoring logic to exclude low-quality results, remove same-author titles, and boost recommendations from matching genres.</li>
+            <li>Cached processed book profiles to significantly reduce runtime on subsequent executions.</li>
+          </ul>
+          <p><strong>Links:</strong> 
+            <a href="https://github.com/Nadine-Thomas/Book-Recommendation-System" target="_blank">GitHub</a>
+          </p>
+        </div>
+        <div class="project-image">
+          <img src="assets/BookRecommedation.png" alt="Book Review Analysis Screenshot">
+        </div>
+      </div>
+
+      <hr>
 
       <div class="project">
-        <h3>Book Recommendation System</h3>
-        <p><strong>Role:</strong> Data Scientist & NLP Engineer</p>
-        <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, Flask</p>
-        <p><strong>Overview:</strong> Developing a recommendation engine that suggests books based on user ratings, reviews, and preferences.</p>
-        <ul>
-          <li>Building a hybrid recommendation system that integrates sentiment analysis and keyword extraction to enhance recommendation accuracy and user relevance.</li>
-          <li>Using natural language processing (NLP) to analyze user reviews and extract key themes from book descriptions.</li>
-          <li>Designing Flask endpoints to serve personalized recommendations and handle user input dynamically.</li>
-        </ul>
+        <div class="project-content">
+          <h3>BoardGameGeek Ratings Exploration App</h3>
+          <p><strong>Role:</strong> Data Analyst & Shiny Developer</p>
+          <p><strong>Tech Stack:</strong> R, Shiny, ggplot2, tidyverse</p>
+          <p><strong>Overview:</strong> Developed an interactive Shiny application to explore how board game characteristics relate to user ratings on BoardGameGeek using visual analytics.</p>
+          <ul>
+            <li>Authored comprehensive in-app documentation explaining the dataset, analytical motivation, methodology, and conclusions.</li>
+            <li>Designed and implemented the <em>Rating Trends</em> tab, enabling users to compare average ratings against multiple game attributes.</li>
+            <li>Built dynamic scatterplots and boxplots that automatically adapt based on variable type (continuous vs. discrete).</li>
+            <li>Added advanced interactivity including game highlighting, optional trend lines, and log-scale transformations.</li>
+            <li>Collaborated on data preparation and visualization logic to ensure clarity, statistical validity, and usability.</li>
+          </ul>
+          <p><strong>Links:</strong> 
+            <a href="https://github.com/Nadine-Thomas/BoardGameGeek-Ratings-Exploration-App" target="_blank">GitHub</a>
+          </p>
+        </div>
+        <div class="project-image">
+          <img src="assets/BoardGame.png" alt="BoardGameGeek Ratings Exploration App Screenshot">
+        </div>
       </div>
+
+      <hr>
+
+      <div class="project">
+        <div class="project-content">
+          <h3>Predicting Smoking Behavior Using PCA and Support Vector Machines</h3>
+          <p><strong>Tech Stack:</strong> R, caret, e1071, ggplot2</p>
+          <p><strong>Overview:</strong> Developed and compared machine learning models to predict social smoking behavior among employees using workplace absenteeism data. Implemented dimensionality reduction with PCA and classification using multiple SVM kernels to optimize prediction performance.</p>
+          <ul>
+            <li>Performed exploratory data analysis to understand class imbalance and feature distributions.</li>
+            <li>Applied PCA to reduce dimensionality while retaining 91.9% of variance across 13 components.</li>
+            <li>Built and evaluated logistic regression and multiple SVM models (linear, sigmoid, radial, polynomial).</li>
+            <li>Achieved highest accuracy (96.9%) and improved specificity (55.6%) using polynomial SVM.</li>
+            <li>Visualized model performance and comparative metrics with ggplot2 for clarity and reporting.</li>
+          </ul>
+          <p><strong>Links:</strong> 
+            <a href="https://github.com/Nadine-Thomas/Predicting-Smoking-Behavior-PCA-SVM" target="_blank">GitHub</a>
+          </p>
+        </div>
+        <div class="project-image">
+          <img src="assets/Smoking.png" alt="Predicting Smoking Behavior Screenshot">
+        </div>
+      </div>
+
     </div>
   </main>
 

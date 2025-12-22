@@ -214,6 +214,34 @@ main {
   text-decoration: underline;
 }
 
+.project {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.project-content {
+  flex: 1;
+}
+
+.project-image {
+  flex: 1;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+  }
+}
+
 /* ===== Footer ===== */
 footer {
   background: #ffb6c1;
